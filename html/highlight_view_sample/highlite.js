@@ -1,7 +1,12 @@
 $(window).on("load",function(){
-    console.log($(".photo").height());
-    $(".photo").width($(".photo").height());
+    init();
 })
 
+$(window).resize(function() {
+    init();
+});
+
 function init(){
+    console.log($(".photo").height());
+    $(".photo").width($(".photo").height());
 }
