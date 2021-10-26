@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\server",
+    "\\server\\server",
+    "\\server\\server\\__pycache__",
+    "\\server\\trip_diary"
+  ],
+  "SelectedNode": "\\server\\server\\urls.py",
+  "PreviewInSolutionExplorer": false
+}
