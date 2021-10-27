@@ -6,7 +6,7 @@ class Image(models.Model):
     trip_id = models.IntegerField()
     date_of_shooting = models.DateTimeField('date of shooting')
     file_name = models.CharField(max_length=100)
-    places_visited_id = models.IntegerField()
+    places_visited = models.IntegerField()
 
 #Tripモデル(id, name, start, end)
 class Trip(models.Model):
@@ -21,5 +21,5 @@ class PlaceVisited(models.Model):
 #VisitHistryモデル(id, trip_id, places_visited_id, date_of_visit)
 class VisitHistry(models.Model):
     trip_id = models.IntegerField()
-    place_visited_id = models.IntegerField()
+    place_visited = models.IntegerField()
     date_of_visit = models.DateTimeField('The date of visit')

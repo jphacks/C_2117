@@ -3,9 +3,8 @@
     "",
     "\\server",
     "\\server\\server",
-    "\\server\\server\\__pycache__",
     "\\server\\trip_diary"
   ],
-  "SelectedNode": "\\server\\server\\urls.py",
+  "SelectedNode": "\\server\\trip_diary\\views.py",
   "PreviewInSolutionExplorer": false
 }
