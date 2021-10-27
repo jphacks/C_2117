@@ -53,7 +53,7 @@ body{
     width: 100%;
 
     font-family: 'Zen Antique Soft', serif;
-    font-size: 50pt;
+    font-size: 10vh;
     color: white;
 
     position: relative;
@@ -62,14 +62,19 @@ body{
 #contents{
     box-sizing: border-box;
     
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     background-color: dimgrey;
     /* background: linear-gradient(0deg, rgba(6,6,80,1) 0%, rgba(16,63,167,1) 100%);  */
 
     width: 100%;/*これいらんかも*/
     height: 100%;
 
+    /* display: inline-block; */
+    overflow-x: scroll;
+}
+#leftSpacer{
+    width: 10vh;
     display: inline-block;
 }
 
@@ -81,30 +86,34 @@ body{
 }
 
 .locationHighlite{
+    display:inline-grid;
     height: 100%;
-    display: inline-block;
 }
 
 .locationName{
-    margin-bottom:5%;
+    position: -webkit-sticky;
+    position: sticky;
+    left:0;
+
     height: 20%;
+
+
 }
 
 .photos{
-    display: inline-flex;
+    display: inline-grid;
     /* flex-direction: column; */
-    align-content: flex-start;
-    flex-wrap: wrap;
     height: 80%;
-    writing-mode: vertical-lr;
+    /* grid-template-columns: 1fr 1fr;画面寸法に応じて行増やせると良い */
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: column;
+    grid-gap: 2%;
 }
 .photo{
     box-sizing: border-box;
 
-    height: 48%;
-    margin-right:2%;
-    margin-bottom: 2%;
-
+    height: 100%;
+    width: 100%;
     /* background-color: antiquewhite; */
     display: flex;
     flex-wrap: wrap;
