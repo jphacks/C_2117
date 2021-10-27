@@ -70,18 +70,19 @@ body{
     width: 100%;/*これいらんかも*/
     height: 100%;
 
-    display: flex;
+    display: inline-block;
 }
 
 #locationHighliteWrapper{
     height: 100%;
-    display: flex;
+    display: inline-flex;
     flex-wrap: nowrap;
-    
+
 }
 
 .locationHighlite{
     height: 100%;
+    display: inline-block;
 }
 
 .locationName{
@@ -90,28 +91,32 @@ body{
 }
 
 .photos{
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
+    /* flex-direction: column; */
     align-content: flex-start;
     flex-wrap: wrap;
     height: 80%;
+    writing-mode: vertical-lr;
 }
 .photo{
     box-sizing: border-box;
 
-    height: 50%;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    margin-right:20px;
+    height: 48%;
+    margin-right:2%;
+    margin-bottom: 2%;
 
     /* background-color: antiquewhite; */
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+
+    writing-mode: horizontal-tb;
 }
 .photo .quarteredPhoto{
     box-sizing: border-box;
-    height:50%;
-    width:50%;
+    height:48%;
+    width:48%;
 }
 
 .photo img{
