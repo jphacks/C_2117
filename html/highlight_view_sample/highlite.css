@@ -102,6 +102,20 @@ body{
     box-shadow:none;
 }
 
+#groupmenu{
+    background-color:darkgrey;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    text-align: center;
+    display:none;
+    /* right:-100%;
+    transition:right 1s; */
+    /* padding:20px 3%; */
+}
+
 #contents{
     box-sizing: border-box;
     
@@ -117,14 +131,31 @@ body{
     width: 100%;/*これいらんかも*/
     height: 100%;
 
+    position: relative;
+
     display: inline-block;
     overflow-x: scroll;
+    
 }
 
 /* #contents::before{
     content: '';
     background: inherit;
+    background-image: url("img/IMG_4498.JPG");
+
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
     filter: blur(5px);
+
+    z-index: -1;
 } */
 
 
@@ -171,7 +202,8 @@ body{
     display: inline-grid;
     height: 80%;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-auto-flow: column;
+    grid-auto-rows:1fr 1fr 1fr 1fr;
+    grid-auto-flow: column dense;
     margin-right: 2%;
     /* gap:1%; */
 }
