@@ -17,9 +17,5 @@ function init(){
     $(".locationHighlite").each(function(index, element){
         $(this).css("width", $(this).children(".photos").width());
     });
-}
-
-let style;
-
-function setup() {
+    $("#filterBtn").css("top", $("#filterBtn").css("right"));
 }
