@@ -4,3 +4,10 @@ $("window").on("load",function(){
 
 function init(){
 }
+
+$(function(){
+    $(".group-menu").hide();
+    $(".button").click(function(){
+        $(".group-menu").toggle(300);
+    });
+});
