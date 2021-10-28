@@ -6,6 +6,7 @@ from .models import Image
 from .serializer import ImageSerializer
 
 class ImageViewSet(viewsets.ModelViewSet):
+    model = Image
     queryset = Image.objects.all()
     serializer_class = ImageSerializer
 

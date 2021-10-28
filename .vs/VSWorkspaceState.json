@@ -3,8 +3,9 @@
     "",
     "\\server",
     "\\server\\server",
-    "\\server\\trip_diary"
+    "\\server\\trip_diary",
+    "\\server\\trip_diary\\migrations"
   ],
-  "SelectedNode": "\\server\\trip_diary\\views.py",
+  "SelectedNode": "\\server\\trip_diary\\urls.py",
   "PreviewInSolutionExplorer": false
 }
