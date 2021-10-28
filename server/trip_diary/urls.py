@@ -5,7 +5,7 @@ from rest_framework import routers
 
 
 router = routers.DefaultRouter()
-router.register(r'images', views.ImageViewSet)
+router.register('images', views.ImageViewSet)
 urlpatterns = [
     path('', views.index, name='index'),
 ]
