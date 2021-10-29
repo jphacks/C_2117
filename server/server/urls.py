@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 from trip_diary.urls import router as trip_diary_router
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('trip_diary/', include(('trip_diary.urls','trip_diary'))),
     url('api/', include(trip_diary_router.urls)),
     path('admin/', admin.site.urls),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

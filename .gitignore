@@ -1,3 +1,5 @@
 db.sqlite3
 html/highlite_view_sample/img/*
+# Byte-compiled / optimized / DLL files
+__pycache__/
 .vs/*
