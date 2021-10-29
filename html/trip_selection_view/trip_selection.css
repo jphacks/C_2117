@@ -59,32 +59,52 @@ body{
     position: relative;
 }
 
+a {
+    text-decoration:none; 
+}
+
 #contents{
+    display:flex;
     box-sizing:border-box;
 
-    background-color:blanchedalmond;
+    background-color:white;
     height:100%;
+    align-items:center;
 
 }
 
-#tripselection{
+#tripselectioncontainer{
+    width: 100%;
+    height:50vh;
+    margin: 40px 0;
+    padding: 45px 0;
+}
+
+.swiper-wrapper{
     display:inline-flex;
     height:100%;
     width:100%;
     align-items: center;
 }
 
-.trip{
-    /* position:relative;
-    display:inline-grid; */
+.swiper-slide{
+    opacity: 0.4;
+    overflow: hidden;
+    transition: .5s;
     height:70%;
-    width:calc(100% / 3);
-    background-color: blue;
+    /* width:calc(100% / 3); */
+    background-color:deepskyblue;
 }
 
-.trip:hover{
-    transform:scale(1.2,1.2);
+.swiper-slide-active {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1.5); /* スライドの大きさ調整 */
 }
+
+/* .trip:hover{
+    transform:scale(1.2,1.2);
+} */
 
 .tripTitle{
     display:flex;
@@ -159,6 +179,7 @@ button{
     position: absolute;
     top: 0;
     right: 0;
+    /* z-index: 2; */
 }
 
 .menu-hidden{
@@ -203,6 +224,7 @@ button{
     height: 100%;
     text-align: center;
     display:none;
+    z-index: 2;
     /* right:-100%;
     transition:right 1s; */
     /* padding:20px 3%; */
