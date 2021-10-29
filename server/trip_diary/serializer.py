@@ -14,5 +14,5 @@ class TripSerializer(serializers.ModelSerializer):
 
 class  VisitHistrySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Trip
+        model = VisitHistry
         fields = ('trip_id', 'place_visited', 'visit_start')
