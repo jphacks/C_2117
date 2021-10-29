@@ -32,10 +32,9 @@ class Image(models.Model):
     placesVisited_id = models.ForeignKey(PlaceVisited,on_delete=models.CASCADE)
     user_id = models.ForeignKey(User,on_delete=models.CASCADE)
     importance = models.IntegerField()
-    category_name = models.ManyToManyField(User)
+    category_name = models.ManyToManyField(Category)
     def __str__(self):
         return self.file_name
-
 
 
 class category(models.Model):

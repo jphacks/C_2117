@@ -1,14 +1,26 @@
 from rest_framework import serializers
 
-from .models import Image,Trip,PlaceVisited,VisitHistry
+from .models import Image,Trip,VisitHistry
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = user
+        fields = ('user_id', 'user_name')
 
 class ImageSerializer(serializers.ModelSerializer):
+    user_id = UserSerializer()
+
     class Meta:
         model = Image
-        fields = ('trip_id', 'date_of_shooting', 'file_name', 'placesVisited_id','user_id','importance')
+        fields = ('image_id', 'trip_id', 'date_of_shooting', 'file_name', 'location','user_id','importance','category_name')
 
 class TripSerializer(serializers.ModelSerializer):
     class Meta:
         model = Trip
-        fields = ('trip_name', 'trip_start', 'trip_end', 'trip_menber')
+        fields = ('trip_id', 'trip_name', 'trip_start', 'trip_end', 'trip_menber')
+
+class  VisitHistrySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Trip
+        fields = ('visitHistry_id', 'trip_id', 'place_visited', 'visit_start')
 
