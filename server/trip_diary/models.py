@@ -2,7 +2,6 @@ from django.db import models
 import uuid
 
 class User(models.Model):
-    user_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user_name = models.CharField(max_length=30)
     def __str__(self):
         return self.user_name
@@ -10,7 +9,6 @@ class User(models.Model):
 
 #Tripモデル(id, trip_name, trip_start, trip_end)
 class Trip(models.Model):
-    trip_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     trip_name = models.CharField(max_length=30)
     trip_start = models.DateTimeField('The start of trip')
     trip_end = models.DateTimeField('The end of trip')
@@ -21,14 +19,12 @@ class Trip(models.Model):
 
 #Categoryモデル(id, name)
 class Category(models.Model):
-    category_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     category_name = models.CharField(max_length=30)
     def __str__(self):
         return self.category_name
 
 #VisitHistryモデル(id, trip_id, places_visited_id, date_of_visit)
 class VisitHistry(models.Model):
-    visitHistry_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     trip_id = models.ForeignKey(Trip,on_delete=models.CASCADE)
     place_visited =  models.CharField(max_length=30)
     visit_start = models.DateTimeField('The start of visit')
@@ -38,7 +34,6 @@ class VisitHistry(models.Model):
 #Imageモデル(id, trip_id, date_of_shooting, file_name, placesVisited_id)
 #primary_keyは未指定のため自動で生成される
 class Image(models.Model):
-    image_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     trip_id = models.ForeignKey(Trip,on_delete=models.CASCADE)
     date_of_shooting = models.DateTimeField('date of shooting')
     file_name = models.CharField(max_length=100)

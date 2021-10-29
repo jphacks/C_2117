@@ -15,7 +15,7 @@ class ImageViewSet(viewsets.ModelViewSet):
     serializer_class = ImageSerializer
     filter_fields = ('user_id', 'trip_id','category_name')
 
-class ImageVeiwSet_highlight:
+class ImageVeiwSet_highlight(viewsets.ModelViewSet):
     queryset = Image.objects.order_by('-importance')[:4]
     serializer_class = ImageSerializer
 
@@ -23,6 +23,11 @@ class TripViewSet(viewsets.ModelViewSet):
     queryset = Trip.objects.all()
     serializer_class = TripSerializer
     filter_fields = ('trip_menber','trip_name')
+
+
+
+
+
 
 class VisitHistryViewSet(viewsets.ModelViewSet):
     queryset = VisitHistry.objects.order_by('visit_start')
