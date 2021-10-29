@@ -76,7 +76,7 @@ body{
 
     display:block;
     text-decoration: none;
-    background:#0099FF;
+    background:#FFFFFF;
     background-image: url("icons/filer.svg");
     background-size: 50%;
     background-position: center;
@@ -93,7 +93,7 @@ body{
     z-index: 999;
 }
 #filterBtn:hover{
-    background:#0099FF;
+    background:#FFFFFF;
     background-image: url("icons/filer.svg");
     background-size: 50%;
     background-position: center;
@@ -112,7 +112,6 @@ body{
     bottom: 0;
     height: 100%;
     text-align: center;
-    display:none;
     /* right:-100%;
     transition:right 1s; */
     /* padding:20px 3%; */

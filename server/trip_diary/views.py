@@ -27,7 +27,7 @@ class TripViewSet(viewsets.ModelViewSet):
 class VisitHistryViewSet(viewsets.ModelViewSet):
     queryset = VisitHistry.objects.order_by('visit_start')
     serializer_class = VisitHistrySerializer
-    filter_fields = ('trip_id','trip_name')
+    filter_fields = ('trip_id','place_visited')
 
 
 

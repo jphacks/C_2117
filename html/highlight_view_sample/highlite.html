@@ -23,7 +23,7 @@
     </head>
     <body>
         <!--templates-->
-        <template>
+        <template id="locationHighlite_template">
             <div class="locationHighlite">
                 <div class="locationName">狩勝峠</div>
                 <ul class="photos">
@@ -31,13 +31,16 @@
             </div>
         </template>
         <template id="photo_small_template">
-            <li class="photo"><img src="img/IMG_4606.JPG"></li>
+            <li class="photo"></li>
         </template>
         <template id="photo_big_template">
-            <li class="photo" style="grid-column: span 2; grid-row: span 2;"><img src="img/IMG_4606.JPG"></li>
+            <li class="photo" style="grid-column: span 2; grid-row: span 2;"></li>
+        </template>
+        <template id="spacer_template">
+            <div class="spacer"></div>
         </template>
         <!--end templates-->
-        
+
         <div id="filterBtn"></div>
         <div id="filterMenu">
             <div id="menuContent">
