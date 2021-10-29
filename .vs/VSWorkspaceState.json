@@ -2,10 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\server",
+    "\\server\\media",
     "\\server\\server",
     "\\server\\trip_diary",
-    "\\server\\trip_diary\\migrations"
+    "\\server\\trip_diary\\migrations",
+    "\\server\\trip_diary\\static",
+    "\\server\\trip_diary\\static\\trip_diary",
+    "\\server\\trip_diary\\static\\trip_diary\\images",
+    "\\server\\trip_diary\\templates"
   ],
-  "SelectedNode": "\\server\\trip_diary\\urls.py",
+  "SelectedNode": "\\server\\server\\settings.py",
   "PreviewInSolutionExplorer": false
 }
