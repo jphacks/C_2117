@@ -1,10 +1,17 @@
 from django.db import models
 
+class User(models.Model): 
+    user_name = models.CharField(max_length=30)
+    def __str__(self):
+        return self.user_name
+
+
 #Tripモデル(id, trip_name, trip_start, trip_end)
 class Trip(models.Model):
     trip_name = models.CharField(max_length=30)
     trip_start = models.DateTimeField('The start of trip')
     trip_end = models.DateTimeField('The end of trip')
+    trip_menber = models.ManyToManyField(User)
     def __str__(self):
         return self.trip_name
 
@@ -14,10 +21,6 @@ class PlaceVisited(models.Model):
     def __str__(self):
         return self.placeVisited_name
 
-class User(models.Model): 
-    user_name = models.CharField(max_length=30)
-    def __str__(self):
-        return self.user_name
 
 #Imageモデル(id, trip_id, date_of_shooting, file_name, placesVisited_id)
 #primary_keyは未指定のため自動で生成される
