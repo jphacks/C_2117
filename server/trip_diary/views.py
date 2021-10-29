@@ -24,11 +24,6 @@ class TripViewSet(viewsets.ModelViewSet):
     serializer_class = TripSerializer
     filter_fields = ('trip_menber','trip_name')
 
-
-
-
-
-
 class VisitHistryViewSet(viewsets.ModelViewSet):
     queryset = VisitHistry.objects.order_by('visit_start')
     serializer_class = VisitHistrySerializer

@@ -21,6 +21,7 @@ class Category(models.Model):
     def __str__(self):
         return self.category_name
 
+
 #VisitHistryモデル(id, trip_id, places_visited_id, date_of_visit)
 class VisitHistry(models.Model):
     trip_id = models.ForeignKey(Trip,on_delete=models.CASCADE)
@@ -35,15 +36,10 @@ class Image(models.Model):
     trip_id = models.ForeignKey(Trip,on_delete=models.CASCADE)
     date_of_shooting = models.DateTimeField('date of shooting')
     file_name = models.CharField(max_length=100)
-    placesVisited_id = models.ForeignKey(PlaceVisited,on_delete=models.CASCADE)
+    location = models.ForeignKey(VisitHistry,on_delete=models.CASCADE)
     user_id = models.ForeignKey(User,on_delete=models.CASCADE)
     importance = models.IntegerField()
     category_name = models.ManyToManyField(Category)
     def __str__(self):
         return self.file_name
 
-
-class category(models.Model):
-    category_name = models.CharField(max_length=30)
-    def __str__(self):
-        return self.place_visited
