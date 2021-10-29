@@ -3,13 +3,88 @@
     <head>
     <title>旅行タイトル</title>
     <link rel="stylesheet" href="location.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
     </style> 
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js" 
+        integrity="sha512-w1Bktzax55ZbjW5Mqjz8+mKz4KqRjEUU35Dpq/ath29yskKqIGwNIHiFNp03m/OiJWDXvdQ1/g6aV+l4PeVO7Q==" 
+        crossorigin="anonymous" >
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.3.1/dist/ml5.min.js" type="text/javascript"></script>
+
+    <script src="location.js"></script>
+
     </head>
     <body>
-        <div id="backGround"></div>
-        <div id="tripTitle">夏休み富山旅行</div>
-        <div id="timeLinebar"></div>
+        <div id="contents">
+            <div id="triptitle">東京</div>
+            <div id ="locationcontainer">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="../highlight_view_sample/highlite.html">
+                            <div class="tripplace">東京タワー</div>
+                            <div class="photos">
+                                <div class="photo"><img src="../img/IMG_1142.JPG"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="tripplace">浅草</div>
+                        <div class="photos">
+                            <div class="photo"><img src="../img/IMG_1149.JPG"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="tripplace">銀座</div>
+                        <div class="photos">
+                            <div class="photo"><img src="../img/IMG_1138.PNG"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            
+            <div id="munuContent">
+                <input id="menu-input" type="checkbox" class="menu-hidden">
+                <label id="menubtn" for="menu-input"><img src="../img/menu.png" alt="menu"></label>
+                <div id="groupmenu">
+                    <div id="groupmenu-scroll">
+                        <div id="groupmenu-content">
+                            <ul>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                                <li>アバウト</li>
+                            </ul>
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

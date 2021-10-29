@@ -31,6 +31,8 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
+
 ol, ul {
 	list-style: none;
 }
@@ -59,22 +61,174 @@ body{
     position: relative;
 }
 
-#backGround{
-    background: rgb(6,6,80);
-    background: linear-gradient(0deg, rgba(6,6,80,1) 0%, rgba(16,63,167,1) 100%); 
+a {
+    text-decoration:none; 
+}
 
+#contents{
+    display:flex;
+    box-sizing:border-box;
+
+    background-color:white;
+    height:100%;
+    align-items:center;
+
+}
+
+#locationcontainer{
     width: 100%;
-    height: 100%;
+    height:50vh;
+    margin: 40px 0;
+    padding: 45px 0;
+}
+
+.swiper-wrapper{
+    display:inline-flex;
+    height:100%;
+    width:100%;
+    align-items: center;
+}
+
+.swiper-slide{
+    opacity: 0.4;
+    overflow: hidden;
+    transition: .5s;
+    height:70%;
+    background-color:deepskyblue;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1.5); /* スライドの大きさ調整 */
 }
 
 #tripTitle{
+    display:flex;
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 20%;
+    left: 20%;
+    font-size: 50pt;
+    color:black;
+}
+
+.tripplace{
+    display:flex;
+    justify-content: center;
+    margin-bottom:5%;
+    height:20%;
+    color:black;
+}
+
+.photos{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:80%;
+}
+
+.photo{
+    position:relative;
+    width:80%;
+    padding-top:80%;
+
+    box-sizing:border-box;
+
+    background-color:antiquewhite;
+    display:inline-block;
+
+}
+
+.photo img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    object-fit:cover;
+}
+
+#menubtn img{
+    position:absolute;
+    width:100%;
+    max-width:50px;
+    left:80vw;
+    top:0;
+}
+
+/* メニューシステム全体の箱 */
+#menuContent{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.menu-hidden{
+    display:none;
+}
+
+#menu-input:checked ~ #groupmenu{
+    display:block;
+    right:0;
+    animation: 1s slideIn;
+}
+
+@keyframes slideIn{
+    0% {
+        transform: translateX(180px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+      }
+      40%,100% {
+        opacity: 1;
+      }
+}
+
+#menubtn{
+    display:block;
+}
+
+/* メニュー欄の箱 */
+#groupmenu{
+    background-color:darkgrey;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    text-align: center;
+    display:none;
+    z-index: 2;
+}
+
+#groupmenu-scroll{
+    overflow:auto;
+    width:100%;
+    height:100%;
+    padding-top: 0px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+#groupmenu-content{
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+ul ,li{
+    position: relative;
+    list-style-position: inside;
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
 }
 
 #timeLinebar{
-    height: 20px;
+    height: 10px;
     width: 100%;
     position: absolute;
     top: 90%;

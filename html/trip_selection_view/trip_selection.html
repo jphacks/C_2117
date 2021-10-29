@@ -3,6 +3,8 @@
     <head>
     <title>旅行一覧</title>
     <link rel="stylesheet" href="trip_selection.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
     </style> 
@@ -25,29 +27,40 @@
     </head>
     <body>
         <div id="contents">
-            <div id="tripselection">
-                <div class="trip">
-                    <div class="tripTitle">東京</div>
-                    <div class="photos">
-                        <div class="photo"><img src="img/IMG_1142.JPG"></div>
+            <div id ="tripselectioncontainer">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="../location_sample/location.html">
+                            <div class="tripTitle">東京</div>
+                            <div class="photos">
+                                <div class="photo"><img src="../img/IMG_1142.JPG"></div>
+                            </div>
+                        </a>
+                        <!-- <div class="tripTitle">東京</div>
+                        <div class="photos">
+                            <div class="photo"><img src="img/IMG_1142.JPG"></div>
+                        </div> -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="tripTitle">北海道</div>
+                        <div class="photos">
+                            <div class="photo"><img src="../img/IMG_1149.JPG"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="tripTitle">福岡</div>
+                        <div class="photos">
+                            <div class="photo"><img src="../img/IMG_1138.PNG"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="trip">
-                    <div class="tripTitle">北海道</div>
-                    <div class="photos">
-                        <div class="photo"><img src="img/IMG_1149.JPG"></div>
-                    </div>
-                </div>
-                <div class="trip">
-                    <div class="tripTitle">福岡</div>
-                    <div class="photos">
-                        <div class="photo"><img src="img/IMG_1138.PNG"></div>
-                    </div>
-                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
+            
             <div id="munuContent">
                 <input id="menu-input" type="checkbox" class="menu-hidden">
-                <label id="menubtn" for="menu-input"><img src="img/menu.png" alt="menu"></label>
+                <label id="menubtn" for="menu-input"><img src="../img/menu.png" alt="menu"></label>
                 <div id="groupmenu">
                     <div id="groupmenu-scroll">
                         <!-- <ul>
