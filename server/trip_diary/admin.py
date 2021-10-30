@@ -1,5 +1,5 @@
 from django.contrib import admin
-from import_export.admin import ImportMixin
+from import_export.admin import ImportExportModelAdmin
 
 from .models import Image,Trip, VisitHistry,User,Category,User
 from .resources import UserResource, ImageResource, TripResource, VisitHistryResource, CategoryResource
@@ -7,19 +7,19 @@ from .resources import UserResource, ImageResource, TripResource, VisitHistryRes
 
 
 
-class UserAdmin(ImportMixin, admin.ModelAdmin):
+class UserAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = UserResource
 
-class ImageAdmin(ImportMixin, admin.ModelAdmin):
+class ImageAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = ImageResource
 
-class TripAdmin(ImportMixin, admin.ModelAdmin):
+class TripAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = TripResource
 
-class VisitHistryAdmin(ImportMixin, admin.ModelAdmin):
+class VisitHistryAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = VisitHistryResource
 
-class CategoryAdmin(ImportMixin, admin.ModelAdmin):
+class CategoryAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = CategoryResource
 
 
