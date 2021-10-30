@@ -3,3 +3,4 @@ html/highlite_view_sample/img/*
 .vs/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
+server/media
