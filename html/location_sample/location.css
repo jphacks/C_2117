@@ -84,64 +84,77 @@ body{
 
 }
 
+#activeContentdetail{
+    position:absolute;
+    display:inline-block;
+    width:26%;
+    height:100%;
+    padding-top:8%;
+    /* background-color:indigo; */
+    color:black;
+    /* animation:1s fadeIn; */
+}
+
+/* @keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+} */
+
+.placeDisplay{
+    position:absolute;
+    padding-top:105%;
+    width:100%;
+    text-align:center;
+    text-shadow: 1px 2px 3px #808080;
+    font-size:40pt;
+}
+
+.tripDisplay{
+    color:black;
+    text-shadow: 1px 2px 3px #808080;
+    font-size:25pt;
+}
+
 #locationcontainer{
-    /* position:absolute; */
-    /* justify-content: center; */
-    /* display:flex;
-    justify-content: center; */
+    position:relative;
+    display:flex;
+    justify-content: center;
     width: 100%;
-    height:80vh;
-    /* margin: 40px 0;
-    padding: 45px 0; */
+    height:100vh;
 }
 
 .swiper-wrapper{
-    position:absolute;
-    /* display:inline-flex; */
-    /* justify-content: center; */
-    /* display:inline-flex; */
     height:100%;
     width:100%;
     align-items: center;
 }
 
 .swiper-slide{
-    /* position:absolute; */
-    /* position:relative; */
-    /* display:flex;
-    justify-content: center; */
-    /* display:flex; */
     justify-content: center;
     opacity: 0.4;
     overflow: hidden;
     transition: .5s;
     height:70%;
-    /* background-color:deepskyblue; */
 }
 
 .swiper-slide-active {
     opacity: 1;
     z-index: 1;
-    transform: scale(1.5); /* スライドの大きさ調整 */
+    transform: scale(1.7); /* スライドの大きさ調整 */
 }
 
 #triptitle{
-    /* display:flex; */
     position: absolute;
     top: 40px;
     left: 40px;
     font-size: 50pt;
     color:black;
     justify-content: center;
-    /* z-index:3; */
 }
 
 .tripplace{
-    /* display:flex; */
     position:absolute;
-    /* justify-content: center; */
     margin-bottom:5%;
-    /* height:-75%; */
     left:30pt;
     font-size:30pt;
     top:80%;
@@ -178,27 +191,89 @@ body{
     object-fit:cover;
 }
 
-#menubtn img{
+#groupmenu img{
     position:absolute;
-    width:100%;
+    /* width:50%; */
     max-width:50px;
-    left:95vw;
-    top:0;
+    left:90vw;
+    top:2;
     z-index:3;
 }
 
-/* メニューシステム全体の箱 */
+/*---------------- メニューシステム全体の箱 ---------------*/
 #menuContent{
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: fixed;
+    /* display:block; */
+    left:90vw;
+    top:2vw;
+    width:360px;
+    height:60px;
+    /* background-color:tomato */
 }
 
-.menu-hidden{
+/* *, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+} */
+
+/* *, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+} */
+
+#groupmenu{
+    position:relative;
+    height: 100%;
+}
+
+.menubtn{
+    /* display:block; */
+    position:relative;
+    overflow:hidden;
+    height:100%;
+    /* width:360px;
+    height:60px; */
+}
+.menubtn #groupmenu a{
+    /* font-size:10px; */
+    display: inline-block;
+    position:absolute;
+    right:-30%;
+    height:100%;
+    width: 100%;
+    /* width:110px;
+    height:54px;
+    padding:12px 15px; */
+    transition:0.4s;
+    /* text-decoration:none; */
+    /* color:white; */
+    border-radius:0.5px 5px 0;
+    background-color:tomato;
+} 
+
+.menubtn #groupmenu a:hover{
+    right:30%;
+}
+
+.menubtn #home{
+    position:absolute;
+    top:20px;
+    background-color:#808080;
+}
+
+/* #groupmenu a{
+    top:20px;
+    opacity:0.6;
+    background-color:black;
+} */
+
+
+
+/* .menu-hidden{
     display:none;
-}
+} */
 
-#menu-input:checked ~ #groupmenu{
+/* #menu-input:checked ~ #groupmenu{
     display:block;
     right:0;
     animation: 1s slideIn;
@@ -215,14 +290,11 @@ body{
       40%,100% {
         opacity: 1;
       }
-}
+} */
 
-#menubtn{
-    display:block;
-}
 
 /* メニュー欄の箱 */
-#groupmenu{
+/* #groupmenu{
     background-color:darkgrey;
     position: fixed;
     top: 0;
@@ -233,9 +305,9 @@ body{
     display:none;
     z-index: 2;
     padding-top:35px;
-}
+} */
 
-#groupmenu-scroll{
+/* #groupmenu-scroll{
     overflow:auto;
     width:100%;
     height:100%;
@@ -261,31 +333,9 @@ ul ,li{
 
 .Detail{
     position:absolute;
-    /* display:flex;
-    justify-content: center; */
     top:20%;
     color:grey;
     text-shadow: 1px 2px 3px #808080;
     font-size:25pt;
     z-index:5;
-}
-
-/* -----------------------------------フィルタリング機能----------------------------------- */
-/* [value="All"]:checked + #locationcontainer .swiper-wrapper[data-category]{
-    display:block;
-}
-[value="People"]:checked + #locationcontainer .swiper-wrapper .swiper-slide:not([data-category~="people"]),
-[value="Food"]:checked + #locationcontainer .swiper-wrapper .swiper-slide:not([data-category~="food"]),
-[value="Back"]:checked + #locationcontainer .swiper-wrapper .swiper-slide:not([data-category~="back"]){
-    display:none;
-} */
-/* --------------------------------------------------------------------------------------- */
-
-/* #timeLinebar{
-    height: 10px;
-    width: 100%;
-    position: absolute;
-    top: 90%;
-
-    background-color:black;
 } */

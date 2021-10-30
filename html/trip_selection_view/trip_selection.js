@@ -6,46 +6,6 @@ $(window).on("load",function(){
 
 
 function init(){
-    // swiper = new Swiper('#tripselectioncontainer', {
-    //     // これをするとぎこちなさがなくなるらしい
-    //     observer: true,
-    //     observeParents: true,
-    //     // ----------------------------------
-
-    //     centeredSlides: true,
-    //     // loop: true,
-    //     speed: 500,
-    //     slidesPerView: 1.5,
-    //     spaceBetween: 40,
-    //     autoplay: {
-    //         delay: 3000,
-    //     },
-    //     navigation: {
-    //         nextEl: '.swiper-button-next',
-    //         prevEl: '.swiper-button-prev',
-    //     },
-    //     pagination:{
-    //         el:'.swiper-pagination',
-    //         type:'bullets',
-    //         clickable:true,
-    //     },
-    //     breakpoints: {
-    
-    //         640: {
-    //             slidesPerView: 2.5,
-    //         },
-    //         768: {
-    //             slidesPerView: 2.75,
-    //         },
-    //         1080: {
-    //             slidesPerView: 3.25,
-    //         },
-    //         1280: {
-    //             slidesPerView: 3.75,
-    //         },
-    //     },
-    // });
-    // swiperReset();
     createSwiper();
     $('.categoryradio').change(function() {
         let val = $(this).val();
