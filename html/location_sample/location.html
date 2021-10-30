@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
-    </style> 
+        @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap');
+    </style>
 
     <script
         src="https://code.jquery.com/jquery-3.6.0.js"
@@ -31,38 +32,65 @@
             <div id="triptitle">東京</div>
             <div id ="locationcontainer">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide"data-category="People">
                         <a href="../highlight_view_sample/highlite.html">
-                            <div class="tripplace">東京タワー</div>
+                            <div class="Detail">
+                                <div class="locationtime">10/23</div>
+                                <div class="locationdate">12:30 am</div>
+                            </div>
                             <div class="photos">
                                 <div class="photo"><img src="../img/IMG_1142.JPG"></div>
                             </div>
+                            <div class="tripplace">東京タワー</div>
                         </a>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="tripplace">浅草</div>
+                    <div class="swiper-slide"data-category="Food">
+                        <div class="Detail">
+                            <div class="locationtime">10/23</div>
+                            <div class="locationdate">18:30 am</div>
+                        </div>
                         <div class="photos">
                             <div class="photo"><img src="../img/IMG_1149.JPG"></div>
                         </div>
+                        <div class="tripplace">浅草</div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="tripplace">銀座</div>
+                    <div class="swiper-slide"data-category="Back">
+                        <div class="Detail">
+                            <div class="locationtime">10/24</div>
+                            <div class="locationdate">12:30 am</div>
+                        </div>
                         <div class="photos">
                             <div class="photo"><img src="../img/IMG_1138.PNG"></div>
                         </div>
+                        <div class="tripplace">銀座</div>
                     </div>
                 </div>
+                <!-------------- ページネーション -------------->
+                <div class="swiper-pagination"></div>
+
+                <!------------ ナビゲーションボタン ------------>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+
+                <!--------------- スクロールバー ---------------->
+                <div class="swiper-scrollbar"></div>
             </div>
             
-            <div id="munuContent">
+            <div id="menuContent">
                 <input id="menu-input" type="checkbox" class="menu-hidden">
                 <label id="menubtn" for="menu-input"><img src="../img/menu.png" alt="menu"></label>
                 <div id="groupmenu">
                     <div id="groupmenu-scroll">
                         <div id="groupmenu-content">
                             <ul>
+                                <input type="radio" name="categories" id="All" value="All" checked class="categoryradio">
+                                <label for="All">全て</label>
+                                <input type="radio" name="categories" id="People" value="People" class="categoryradio">
+                                <label for="People">people</label>
+                                <input type="radio" name="categories" id="Food" value="Food" class="categoryradio">
+                                <label for="Food">food</label>
+                                <input type="radio" name="categories" id="Back" value="Back" class="categoryradio">
+                                <label for="Back">background</label>
                                 <li>アバウト</li>
                                 <li>アバウト</li>
                                 <li>アバウト</li>

@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
-    </style> 
+        @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap');
+    </style>
 
     <script
         src="https://code.jquery.com/jquery-3.6.0.js"
@@ -29,33 +30,45 @@
         <div id="contents">
             <div id ="tripselectioncontainer">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide"data-category="circle">
                         <a href="../location_sample/location.html">
-                            <div class="tripTitle">東京</div>
                             <div class="photos">
                                 <div class="photo"><img src="../img/IMG_1142.JPG"></div>
                             </div>
+                            <div class="tripDetail">
+                                <div class="tripTitle">東京</div>
+                                <div class="tripdate">August 2018</div>
+                            </div>
                         </a>
-                        <!-- <div class="tripTitle">東京</div>
-                        <div class="photos">
-                            <div class="photo"><img src="img/IMG_1142.JPG"></div>
-                        </div> -->
                     </div>
-                    <div class="swiper-slide">
-                        <div class="tripTitle">北海道</div>
+                    <div class="swiper-slide"data-category="shibaura">
                         <div class="photos">
                             <div class="photo"><img src="../img/IMG_1149.JPG"></div>
                         </div>
+                        <div class="tripDetail">
+                            <div class="tripTitle">北海道</div>
+                            <div class="tripdate">September 2018</div>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="tripTitle">福岡</div>
+                    <div class="swiper-slide"data-category="highschool">
                         <div class="photos">
                             <div class="photo"><img src="../img/IMG_1138.PNG"></div>
                         </div>
+                        <div class="tripDetail">
+                            <div class="tripTitle">福岡</div>
+                            <div class="tripdate">May 2019</div>
+                        </div>
                     </div>
                 </div>
+                <!-------------- ページネーション -------------->
+                <div class="swiper-pagination"></div>
+
+                <!------------ ナビゲーションボタン ------------>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+
+                <!-- ------------- スクロールバー --------------
+                <div class="swiper-scrollbar"></div> -->
             </div>
             
             <div id="munuContent">
@@ -63,25 +76,16 @@
                 <label id="menubtn" for="menu-input"><img src="../img/menu.png" alt="menu"></label>
                 <div id="groupmenu">
                     <div id="groupmenu-scroll">
-                        <!-- <ul>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                            <li>アバウト</li>
-                        </ul> -->
                         <div id="groupmenu-content">
                             <ul>
+                                <input type="radio" name="categories" id="All" value="All" checked class="categoryradio">
+                                <label for="All">全て</label>
+                                <input type="radio" name="categories" id="circle" value="circle" class="categoryradio">
+                                <label for="circle">circle</label>
+                                <input type="radio" name="categories" id="shibaura" value="shibaura" class="categoryradio">
+                                <label for="shibaura">芝浦</label>
+                                <input type="radio" name="categories" id="highschool" value="highschool" class="categoryradio">
+                                <label for="highschool">高校</label>
                                 <li>アバウト</li>
                                 <li>アバウト</li>
                                 <li>アバウト</li>
@@ -104,38 +108,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <button type="button">カテゴリ</button> -->
         </div>
-        <!-- <button type="button">カテゴリ</button>
-        <div id="group-menu">
-            <div id="menutitle">group</div>
-            <div id="form">
-            </div>
-            <section id="menu-content">
-                <div class="group list">
-                    <div class="group-name">芝浦工大</div>
-                    <ul>flex
-                        <li class="circle"></li>
-                    </ul>
-                </div>
-                <div class="group list">
-                    <div class="group-name">芝浦工大</div>
-                    <ul>flex
-                        <li class="circle"></li>
-                    </ul>
-                </div>
-                <div class="group list">
-                    <div class="group-name">芝浦工大</div>
-                    <ul>flex
-                        <li class="circle"></li>
-                    </ul>
-                </div>
-
-            </section>
-
-        </div> -->
-        
-
-        <!-- <div id="timeLinebar"></div> -->
     </body>
 </html>
