@@ -27,14 +27,33 @@
 
     </head>
     <body>
+        <!---------------------- templates ---------------------->
+        <template id="swiper-wrapper_template">
+            <div class="swiper-slide"data-category="highschool">
+                <a href="../location_sample/location.html">
+                    <div class="photo"><img src=""></div>
+                    <div class="tripDetail">
+                        <div class="tripTitle">東京</div>
+                        <div class="tripdate">August 2018</div>
+                    </div>
+                </a>
+            </div>
+            <div class="groupMenu_template">
+                <input type="radio" name="categories" id="circle" value="circle" class="categoryradio">
+                <label for="circle">circle</label>
+            </div>
+
+        </template>
+
+
+
+
         <div id="contents">
             <div id ="tripselectioncontainer">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"data-category="circle">
                         <a href="../location_sample/locationa.html">
-                            <div class="photos">
-                                <div class="photo"><img src="../img/IMG_1142.JPG"></div>
-                            </div>
+                            <div class="photo"><img src="../img/IMG_1142.JPG"></div>
                             <div class="tripDetail">
                                 <div class="tripTitle">東京</div>
                                 <div class="tripdate">August 2018</div>
@@ -43,9 +62,7 @@
                     </div>
                     <div class="swiper-slide"data-category="shibaura">
                         <a href="../location_sample/locationb.html">
-                            <div class="photos">
-                                <div class="photo"><img src="../img/IMG_1149.JPG"></div>
-                            </div>
+                            <div class="photo"><img src="../img/IMG_1149.JPG"></div>
                             <div class="tripDetail">
                                 <div class="tripTitle">北海道</div>
                                 <div class="tripdate">September 2018</div>
@@ -54,9 +71,7 @@
                     </div>
                     <div class="swiper-slide"data-category="highschool">
                         <a href="../location_sample/locationc.html">
-                            <div class="photos">
-                                <div class="photo"><img src="../img/IMG_1138.PNG"></div>
-                            </div>
+                            <div class="photo"><img src="../img/IMG_1138.PNG"></div>
                             <div class="tripDetail">
                                 <div class="tripTitle">福岡</div>
                                 <div class="tripdate">May 2019</div>
@@ -75,7 +90,7 @@
                 <div class="swiper-scrollbar"></div> -->
             </div>
             
-            <div id="munuContent">
+            <div id="menuContent">
                 <input id="menu-input" type="checkbox" class="menu-hidden">
                 <label id="menubtn" for="menu-input"><img src="../img/menu.png" alt="menu"></label>
                 <div id="groupmenu">
