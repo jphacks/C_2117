@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\server",
+    "\\server\\media\\test",
     "\\server\\server",
     "\\server\\trip_diary",
     "\\server\\trip_diary\\migrations"
   ],
-  "SelectedNode": "\\server\\trip_diary\\admin.py",
+  "SelectedNode": "\\server\\trip_diary\\static",
   "PreviewInSolutionExplorer": false
 }

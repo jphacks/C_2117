@@ -9,8 +9,8 @@ class User(models.Model):
 #Tripモデル(id, trip_name, trip_start, trip_end)
 class Trip(models.Model):
     trip_name = models.CharField(max_length=30)
-    trip_start = models.DateTimeField('The start of trip')
-    trip_end = models.DateTimeField('The end of trip')
+    trip_start = models.DateTimeField(verbose_name='The start of trip', null=True, blank=True)
+    trip_end = models.DateTimeField(verbose_name='The end of trip', null=True, blank=True)
     trip_menber = models.ManyToManyField(User)
     def __str__(self):
         return self.trip_name
@@ -34,7 +34,7 @@ class VisitHistry(models.Model):
 #primary_keyは未指定のため自動で生成される
 class Image(models.Model):
     trip_id = models.ForeignKey(Trip,on_delete=models.CASCADE)
-    date_of_shooting = models.DateTimeField('date of shooting')
+    date_of_shooting = models.DateTimeField(verbose_name='date of shooting', null=True, blank=True)
     file_name = models.CharField(max_length=100)
     location = models.ForeignKey(VisitHistry,on_delete=models.CASCADE)
     user_id = models.ForeignKey(User,on_delete=models.CASCADE)
