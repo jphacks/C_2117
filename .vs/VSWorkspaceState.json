@@ -5,12 +5,8 @@
     "\\server\\media",
     "\\server\\server",
     "\\server\\trip_diary",
-    "\\server\\trip_diary\\migrations",
-    "\\server\\trip_diary\\static",
-    "\\server\\trip_diary\\static\\trip_diary",
-    "\\server\\trip_diary\\static\\trip_diary\\images",
-    "\\server\\trip_diary\\templates"
+    "\\server\\trip_diary\\migrations"
   ],
-  "SelectedNode": "\\server\\server\\settings.py",
+  "SelectedNode": "\\server\\trip_diary\\urls.py",
   "PreviewInSolutionExplorer": false
 }

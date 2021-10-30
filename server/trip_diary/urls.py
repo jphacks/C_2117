@@ -8,6 +8,8 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register(r'images', views.ImageViewSet)
+router.register(r'trip', views.TripViewSet)
+router.register(r'visitHistry', views.VisitHistryViewSet)
 urlpatterns = [
     path('', views.index, name='index'),
 ]
