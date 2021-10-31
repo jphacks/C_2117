@@ -156,12 +156,12 @@ body{
     z-index:4;
 }
 
-.photos{
+/* .photos{
     display:flex;
     justify-content: center;
     align-items: center;
     height:100%;
-}
+} */
 
 .photo{
     position:relative;
@@ -207,12 +207,11 @@ body{
     z-index:3;
 }
 
-#menuContent{
+/* #menuContent{
     position: absolute;
     top: 0;
     right: 0;
-    /* z-index: 2; */
-}
+} */
 
 .menu-hidden{
     display:none;
