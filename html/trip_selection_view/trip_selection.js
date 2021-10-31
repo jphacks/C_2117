@@ -128,12 +128,6 @@ function viewInit(trips, images){
     for(let i = 0; i < trips.length; i++){
         let swiperSlide = $($('#swiper-wrapper_template').html());
         
-        // filter
-        // let extracted = images.filter(function(item){
-        //     return item.location == i;
-        // });
-
-        // swiper.removeAllSlides();
         swiperSlide.children("a").children(".photo").children("img").attr("src",api_prefix+images[i].file_name);
         swiperSlide.children("a").children(".tripDetail").children(".tripTitle").text(trips[i].trip_name);
         swiperSlide.children("a").children(".tripDetail").children(".tripdate").text(trips[i].trip_start);
